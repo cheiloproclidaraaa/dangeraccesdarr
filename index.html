@@ -3,66 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Twenty Dearr</title>
+    <title>Happy Birthday ❤️</title>
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
             color: white;
+            background: url('WhatsApp-Image.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        section {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            overflow-x: hidden;
             padding: 20px;
         }
-        h1 {
-            font-size: 3rem;
-            margin-top: 10vh;
-            animation: fadeIn 2s ease-in-out;
-        }
-        #typed-text {
-            font-size: 1.2rem;
+        .ucapan {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 20px;
+            border-radius: 10px;
             max-width: 800px;
-            margin: 20px auto;
-            line-height: 1.6;
-            white-space: pre-wrap;
-            text-align: center;
-            min-height: 200px;
         }
-        @keyframes fadeIn {
-            from {opacity: 0;}
-            to {opacity: 1;}
+        h1 {
+            font-size: 2.5rem;
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
 
-    <h1>💖 Selamat Ulang Tahun Sayang 🤍</h1>
+    <!-- Bagian 1 -->
+    <section>
+        <div class="ucapan">
+            <h1>Happy Birthday 🤍</h1>
+            <p>Semoga hari ini jadi awal yang indah untuk setahun ke depan.</p>
+        </div>
+    </section>
 
-    <!-- Musik otomatis -->
-    <audio autoplay loop>
-        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
-    </audio>
+    <!-- Bagian 2 -->
+    <section>
+        <div class="ucapan">
+            <p>
+                Today is ur birthday babeee, happy birthday semoga tahun ini menjadi tahun yang lebih baik daripada tahun sebelumnya, loveee youuu ❤️
+                Semoga panjang umur, sehat selalu sayangg, dilancarkan dan dimudahkan semua urusan kamu, serta dikelilingi orang-orang baik.
+                Maaf aku ga bisa merayakan secara langsung, aku ga punya hadiah yang spesial buat aku kasih, tapi aku berharap kamu selalu sama aku terus.
+                Maaf kalo aku ga bisa kasih sesuatu yang kamu mau, tapi aku sayang kamu banget.
+            </p>
+        </div>
+    </section>
 
-    <!-- Efek mengetik -->
-    <div id="typed-text"></div>
+    <!-- Bagian 3 -->
+    <section>
+        <div class="ucapan">
+            <h1>Tentang Dia</h1>
+            <p>Dia adalah orang yang bikin aku tersenyum setiap hari, bahkan di hari-hari tersulit sekalipun.</p>
+        </div>
+    </section>
 
-    <script>
-        const text = `Today is ur birthday babeee, happy birthday 🤍 semoga tahun ini menjadi tahun yang lebih baik daripada tahun sebelumnya, loveee youuu.
-Semoga panjang umur, sehat selalu sayangg, dilancarkan dan dimudahkan semua urusan kamuu, dan dikelilingi orang-orang baik.
-Maaf aku ga bisa merayakan secara langsung, aku ga punya hadiah yang spesial buat aku kasih,
-tapi aku berharap kamu selalu sama aku teruss 🤍 Maaf kalo aku ga bisa kasih sesuatu yang kamu mau,
-aku cuma mau kamu tau kalau aku selalu sayang sama kamu 💖`;
-
-        let index = 0;
-        function typeWriter() {
-            if (index < text.length) {
-                document.getElementById("typed-text").innerHTML += text.charAt(index);
-                index++;
-                setTimeout(typeWriter, 50); // kecepatan mengetik (ms)
-            }
-        }
-        typeWriter();
-    </script>
+    <!-- Bagian 4 -->
+    <section>
+        <div class="ucapan">
+            <h1>Tentang Aku dan Dia</h1>
+            <p>Aku dan dia adalah cerita yang nggak akan pernah bosan aku tulis, karena tiap hal kecil bersamanya adalah kenangan berharga.</p>
+        </div>
+    </section>
 
 </body>
 </html>
