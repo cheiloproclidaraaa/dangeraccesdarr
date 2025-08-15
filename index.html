@@ -16,13 +16,15 @@
     }
     .slider {
         display: flex;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
+        flex-direction: column;       /* scroll vertikal */
+        overflow-y: scroll;           /* scroll ke bawah */
+        scroll-snap-type: y mandatory;
         height: 100vh;
+        scroll-behavior: smooth;      /* scroll halus */
     }
     .slide {
-        flex: 0 0 100%;
-        scroll-snap-align: center;
+        flex: 0 0 100vh;              /* tiap slide setinggi layar */
+        scroll-snap-align: start;
         background-image: url('WhatsApp Image 2025-08-15 at 17.46.10.jpeg');
         background-size: cover;
         background-position: center;
