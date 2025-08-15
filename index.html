@@ -36,17 +36,43 @@
             50% {transform: scale(1.3);}
             100% {transform: scale(1);}
         }
+        .extra-text {
+            color: yellow;
+            margin-top: 40px;
+            font-size: 1.3rem;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .gallery img {
+            border-radius: 10px;
+            max-width: 300px;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
 
-    <h1>💖 Selamat Ulang Tahun Sayang,today is ur birthday babeee, happy birthday semoga tahun ini menjadi tahun yang lebih baik daripada tahun sebelumnya, loveee youuu 💖</h1>
+    <h1>💖 Selamat Ulang Tahun Sayang 💖</h1>
     <p>Semoga semua mimpi dan harapanmu tercapai <span class="heart">❤️</span></p>
 
     <!-- Musik otomatis -->
     <audio autoplay loop>
         <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
     </audio>
+
+    <!-- Tambahan teks -->
+    <h2 class="extra-text">Semoga panjang umur, sehat selalu, dan sukses dalam segala hal ✨</h2>
+
+    <!-- Dua foto berdampingan -->
+    <div class="gallery">
+        <img src="photobooth (1).png" alt="Foto Kenangan 1">
+        <img src="webcam-toy-photo4 (2).jpg" alt="Foto Kenangan 2">
+    </div>
 
 </body>
 </html>
