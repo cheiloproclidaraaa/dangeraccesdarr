@@ -3,79 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday ❤️</title>
+    <title>Happy Twenty Dearr</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
-            font-family: Arial, sans-serif;
-            color: white;
-            background: url('WhatsApp-Image.jpg') no-repeat center center fixed;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: url('WhatsApp Image 2025-08-15 at 17.46.10.jpeg') no-repeat center center fixed;
             background-size: cover;
-        }
-        section {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            color: white;
             text-align: center;
-            padding: 20px;
+            overflow-x: hidden;
+            height: 100vh;
+            position: relative;
         }
-        .ucapan {
-            background: rgba(0, 0, 0, 0.4);
-            padding: 20px;
-            border-radius: 10px;
+        /* Overlay gelap */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 0;
+        }
+        .content {
+            position: relative;
+            z-index: 1;
             max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            top: 15vh;
         }
         h1 {
             font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
         }
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
+        #message {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            white-space: pre-line;
+            border-right: 2px solid white;
+            overflow: hidden;
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
         }
     </style>
 </head>
 <body>
 
-    <!-- Bagian 1 -->
-    <section>
-        <div class="ucapan">
-            <h1>Happy Birthday 🤍</h1>
-            <p>Semoga hari ini jadi awal yang indah untuk setahun ke depan.</p>
-        </div>
-    </section>
+    <div class="content">
+        <h1>💖 Selamat Ulang Tahun Sayang 💖</h1>
+        <p id="message"></p>
+    </div>
 
-    <!-- Bagian 2 -->
-    <section>
-        <div class="ucapan">
-            <p>
-                Today is ur birthday babeee, happy birthday semoga tahun ini menjadi tahun yang lebih baik daripada tahun sebelumnya, loveee youuu ❤️
-                Semoga panjang umur, sehat selalu sayangg, dilancarkan dan dimudahkan semua urusan kamu, serta dikelilingi orang-orang baik.
-                Maaf aku ga bisa merayakan secara langsung, aku ga punya hadiah yang spesial buat aku kasih, tapi aku berharap kamu selalu sama aku terus.
-                Maaf kalo aku ga bisa kasih sesuatu yang kamu mau, tapi aku sayang kamu banget.
-            </p>
-        </div>
-    </section>
+    <!-- Musik otomatis -->
+    <audio autoplay loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    </audio>
 
-    <!-- Bagian 3 -->
-    <section>
-        <div class="ucapan">
-            <h1>Tentang Dia</h1>
-            <p>Dia adalah orang yang bikin aku tersenyum setiap hari, bahkan di hari-hari tersulit sekalipun.</p>
-        </div>
-    </section>
+    <script>
+        const text = `today is ur birthday babeee, happy birthday semoga tahun ini menjadi tahun yang lebih baik daripada tahun sebelumnya, loveee youuu ❤️
+semoga panjang umur, sehat selalu sayangg, dilancarkan dan dimudahkan semuaaaaa urusan kamuu, dan dikelilingi orang-orang baikkk ❤️
+Maaf aku ga bisa merayakan secara langsung, aku ga punya hadiah yang spesial buat aku kasiii,
+tapi aku berharap kamu selalu sama aku teruss ❤️
+maaf kalo aku ga bisa kasih sesuatu yg kamu mau ❤️`;
 
-    <!-- Bagian 4 -->
-    <section>
-        <div class="ucapan">
-            <h1>Tentang Aku dan Dia</h1>
-            <p>Aku dan dia adalah cerita yang nggak akan pernah bosan aku tulis, karena tiap hal kecil bersamanya adalah kenangan berharga.</p>
-        </div>
-    </section>
+        let i = 0;
+        const speed = 50; // kecepatan ketik (ms)
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("message").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        window.onload = typeWriter;
+    </script>
 
 </body>
 </html>
