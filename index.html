@@ -1,95 +1,66 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            color: white;
-            background: url('WhatsApp-Image.jpg') no-repeat center center fixed;
-            background-size: cover;
-            scroll-behavior: smooth;
-        }
-        section {
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 20px;
-        }
-        .ucapan {
-            background: rgba(0, 0, 0, 0.4);
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 800px;
-        }
-        h1 {
-            font-size: 2.5rem;
-        }
-        p {
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body, html {
+        height: 100%;
+        font-family: Arial, sans-serif;
+    }
+    .slider {
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        height: 100vh;
+    }
+    .slide {
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+        background-image: url('WhatsApp Image 2025-08-15 at 17.46.10.jpeg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+    .text {
+        background: rgba(0,0,0,0.5);
+        color: white;
+        font-size: 1.5em;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 90%;
+        text-align: center;
+    }
+</style>
 </head>
 <body>
 
-    <!-- Musik autoplay -->
-    <audio autoplay loop>
-        <source src="lagu.mp3" type="audio/mpeg">
-    </audio>
-
-    <!-- Slide 1 -->
-    <section>
-        <div class="ucapan">
-            <h1>Happy Birthday</h1>
-            <p>Semoga hari ini jadi awal yang indah untuk setahun ke depan.</p>
-        </div>
-    </section>
-
-    <!-- Slide 2 -->
-    <section>
-        <div class="ucapan">
-            <p>
-                Today is ur birthday babeee, happy birthday semoga tahun ini menjadi tahun yang lebih baik daripada tahun sebelumnya, loveee youuu.
-                Semoga panjang umur, sehat selalu sayangg, dilancarkan dan dimudahkan semua urusan kamu, serta dikelilingi orang-orang baik.
-            </p>
-        </div>
-    </section>
-
-    <!-- Slide 3 -->
-    <section>
-        <div class="ucapan">
-            <p>
-                Maaf aku ga bisa merayakan secara langsung, aku ga punya hadiah yang spesial buat aku kasih, tapi aku berharap kamu selalu sama aku terus.
-            </p>
-        </div>
-    </section>
-
-    <!-- Slide 4 -->
-    <section>
-        <div class="ucapan">
-            <p>
-                Maaf kalo aku ga bisa kasih sesuatu yang kamu mau, tapi aku sayang kamu banget.
-            </p>
-        </div>
-    </section>
-
-    <!-- Slide 5 -->
-    <section>
-        <div class="ucapan">
-            <h1>Tentang Dia</h1>
-            <p>Dia adalah orang yang bikin aku tersenyum setiap hari, bahkan di hari-hari tersulit sekalipun.</p>
-        </div>
-    </section>
+<div class="slider">
+    <div class="slide">
+        <div class="text">Today is ur birthday babeee, happy birthday semoga tahun ini menjadi tahun yang lebih baik daripada tahun sebelumnya</div>
+    </div>
+    <div class="slide">
+        <div class="text">Semoga panjang umur, sehat selalu sayangg, dilancarkan dan dimudahkan semua urusan kamuu</div>
+    </div>
+    <div class="slide">
+        <div class="text">Dikelilingi orang-orang baik yang selalu support kamu</div>
+    </div>
+    <div class="slide">
+        <div class="text">Maaf aku ga bisa merayakan secara langsung, aku ga punya hadiah yang spesial buat aku kasih</div>
+    </div>
+    <div class="slide">
+        <div class="text">Tapi aku berharap kamu selalu sama aku terus, maaf kalo aku ga bisa kasih sesuatu yang kamu mau</div>
+    </div>
+</div>
 
 </body>
 </html>
