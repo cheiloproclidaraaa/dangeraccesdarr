@@ -16,14 +16,15 @@
     }
     .slider {
         display: flex;
-        flex-direction: column;       /* scroll vertikal */
-        overflow-y: scroll;           /* scroll ke bawah */
+        flex-direction: column;       
+        overflow-y: scroll;           
         scroll-snap-type: y mandatory;
         height: 100vh;
-        scroll-behavior: smooth;      /* scroll halus */
+        scroll-behavior: smooth;      
     }
     .slide {
-        flex: 0 0 100vh;              /* tiap slide setinggi layar */
+        position: relative;           
+        flex: 0 0 100vh;              
         scroll-snap-align: start;
         background-image: url('WhatsApp Image 2025-08-15 at 17.46.10.jpeg');
         background-size: cover;
@@ -32,6 +33,7 @@
         align-items: center;
         justify-content: center;
         padding: 20px;
+        flex-direction: column;
     }
     .text {
         background: rgba(0,0,0,0.5);
@@ -41,6 +43,14 @@
         border-radius: 10px;
         max-width: 90%;
         text-align: center;
+    }
+    .watermark {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-size: 0.8em;
+        color: rgba(255,255,255,0.5);
+        pointer-events: none;   
     }
 </style>
 </head>
@@ -61,6 +71,10 @@
     </div>
     <div class="slide">
         <div class="text">Tapi aku berharap kamu selalu sama aku terus, maaf kalo aku ga bisa kasih sesuatu yang kamu mau</div>
+    </div>
+    <div class="slide">
+        <div class="text">happy birthday to the love of my life</div>
+        <div class="watermark">daraa – buat cowo paling lucuu seduniaa</div>
     </div>
 </div>
 
